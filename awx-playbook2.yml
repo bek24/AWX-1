@@ -12,12 +12,3 @@
       groups: www-data
       append: yes
       password: "user_pw"
-
-  - name: Create Folder
-    file:
-      path: "/var/www/{{new_user}}"
-      state: directory
-      recurese: yes
-      owner: root
-      group: root
-      mode: 0755 
