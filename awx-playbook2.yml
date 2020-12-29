@@ -1,0 +1,23 @@
+- name: AWX test
+  hosts: all
+  become: yes 
+
+  tasks:
+
+  - name: Create User
+    user:
+      name: "akylbek"
+      home: "/home/akylbek"
+      shell: /bin/bash
+      groups: www-data
+      append: yes
+      password: "user_pw"
+
+  - name: Create Folder
+    file:
+      path: "/var/www/{{new_user}}"
+      state: directory
+      recurese: yes
+      owner: root
+      group: root
+      mode: 0755 
