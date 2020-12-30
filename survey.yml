@@ -29,7 +29,7 @@
       name: "*"
 
   - name: Install default Packages
-    apt:
+    yum:
       name: "{{packages}}"
   
   - name: Set Hostname
