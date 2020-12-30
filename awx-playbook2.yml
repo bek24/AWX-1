@@ -7,26 +7,12 @@
   - name: Create User
     user:
       name: "akylbek"
+      name: "uulka"
+      name: "nurkyz"
       home: "/home/akylbek"
       shell: /bin/bash
       groups: www-data
       append: yes
       password: "user_pw"
       
-   - name: Create User
-    user:
-      name: "uulka"
-      home: "/home/ulka"
-      shell: /bin/bash
-      groups: www-data
-      append: yes
-      password: "user_pw"
       
-    - name: Create User
-    user:
-      name: "nurkyz"
-      home: "/home/nurkyz"
-      shell: /bin/bash
-      groups: www-data
-      append: yes
-      password: "user_pw"
