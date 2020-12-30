@@ -21,15 +21,15 @@
     ping:
 
   - name: Repo Update
-    apt:
+    yum:
       update_cache: yes
 
   - name: Upgrade all packages to the latest version
-    apt:
+    yum:
       name: "*"
 
   - name: Install default Packages
-    apt:
+    yum:
       name: "{{packages}}"
   
   - name: Set Hostname
